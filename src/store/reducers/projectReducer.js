@@ -13,6 +13,10 @@ const initState = {
 {/* this is going to set the state equal to the initial state and 'return state' */}
 {/* this is set the state equal to the initial */}
 const projectReducer = (state = initState, action) => {
+    switch(action.type) {
+        case 'CREATE_PROJECT': 
+            console.log('created project', action.project)
+    }
     return state
 
 }
