@@ -3,7 +3,7 @@ import 'firebase/firestore'
 import 'firebase/auth'
 
 // Your web app's Firebase configuration
-var firebaseConfig = {
+var Config = {
     apiKey: "AIzaSyAltfXx7oDaXK0nPAmAd9mCprFQYvIk5s8",
     authDomain: "simpleplan-687b3.firebaseapp.com",
     databaseURL: "https://simpleplan-687b3.firebaseio.com",
@@ -14,6 +14,8 @@ var firebaseConfig = {
     measurementId: "G-YDV9BEW6CM"
   };
   // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-  firebase.analytics();
-  firebase.firestore().settings({timestampsInSnapshots: true})
+  firebase.initializeApp(Config);
+  //firebase.analytics();
+  firebase.firestore().settings({timestampsInSnapshots: true});
+
+  export default firebase
