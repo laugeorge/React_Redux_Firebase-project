@@ -15,7 +15,9 @@ const store = createStore(rootReducer,
     compose(
         applyMiddleware(thunk.withExtraArgument({ getFirebase, getFirestore })), 
         reduxFirestore(fbConfig), 
-        reactReduxFirebase(fbConfig, {attachAuthIsReady: true})
+
+        // using 'useFirestoreForProfile' and 'userProfile to display logged in profile firstName and lastName
+        reactReduxFirebase(fbConfig, {useFirestoreForProfile: true, userProfile: 'users', attachAuthIsReady: true})
     )
 );
 
